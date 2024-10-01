@@ -71,11 +71,38 @@
         { element: '#icon-32', href: { dark: './icons/light-favicon-32x32.png' } }
       ])
     </script>
-  </head>
 
-  <body>
-    <h1>Water.css</h1>
 
+</head>
+
+<body>
+  
+  <h1>Water.css</h1>
+  <!-- toggle dark-mode  -->
+  <div id="theme-container" aria-label="Toggle dark mode">
+    <button id="theme-toggle">
+      <img id="themeIcon" class="" src="./icons/sun.png" alt="Toggle dark mode icon"  />
+    </button>
+  </div>
+  <script>
+    const themeToggleButton = document.getElementById('theme-toggle')
+const themeStylesheet = document.getElementById('js-stylesheet')
+const themeIcon = document.getElementById('themeIcon')
+// Toggle between dark and light themes
+themeToggleButton.addEventListener('click', () => {
+      const currentTheme = themeStylesheet.getAttribute('href')
+
+      if (currentTheme.includes('light.min.css')) {
+        // Switch to dark theme
+        themeStylesheet.setAttribute('href', './water.css/dark.min.css')
+        themeIcon.setAttribute('src', './icons/sun.png') // Path to light mode icon
+      } else {
+        // Switch to light theme
+        themeStylesheet.setAttribute('href', './water.css/light.min.css')
+        themeIcon.setAttribute('src', './icons/moon.png') // Path to dark mode icon
+      }
+    })
+  </script>     
     <p>
       Water.css is a drop-in collection of CSS styles to make simple websites like this just a
       little bit nicer.

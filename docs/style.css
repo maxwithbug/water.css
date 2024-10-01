@@ -63,3 +63,29 @@ body > footer {
   align-items: center;
   justify-content: space-between;
 }
+
+/* toggle dark mode */
+#theme-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#theme-toggle {
+  padding: 10px 15px;
+  background-color: #bebebe;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px #0003;
+  color: #000;
+}
+
+#theme-toggle:hover {
+  color: #fff;
+}
+
+#themeIcon {
+  height: 25px;
+}
