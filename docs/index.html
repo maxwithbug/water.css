@@ -71,12 +71,8 @@
         { element: '#icon-32', href: { dark: './icons/light-favicon-32x32.png' } }
       ])
     </script>
-
-
 </head>
-
 <body>
-  
   <h1>Water.css</h1>
   <!-- toggle dark-mode  -->
   <div id="theme-container" aria-label="Toggle dark mode">
@@ -86,10 +82,10 @@
   </div>
   <script>
     const themeToggleButton = document.getElementById('theme-toggle')
-const themeStylesheet = document.getElementById('js-stylesheet')
-const themeIcon = document.getElementById('themeIcon')
-// Toggle between dark and light themes
-themeToggleButton.addEventListener('click', () => {
+    const themeStylesheet = document.getElementById('js-stylesheet')
+    const themeIcon = document.getElementById('themeIcon')
+    // Toggle between dark and light themes
+    themeToggleButton.addEventListener('click', () => {
       const currentTheme = themeStylesheet.getAttribute('href')
 
       if (currentTheme.includes('light.min.css')) {
