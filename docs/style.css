@@ -64,7 +64,7 @@ body > footer {
   justify-content: space-between;
 }
 
-/* toggle dark mode */
+/* toggle theme */
 #theme-container {
   position: fixed;
   top: 20px;
@@ -73,10 +73,12 @@ body > footer {
 }
 
 #theme-toggle {
-  padding: 10px 15px;
-  background-color: #bebebe;
+  width: 50px; /* Equal width and height for a perfect circle */
+  height: 50px;
+  padding: 0; /* No padding so that the circle shape is maintained */
+  background-color: #dddbdb;
   border: none;
-  border-radius: 5px;
+  border-radius: 50%; /* Makes it a circle */
   cursor: pointer;
   box-shadow: 0 2px 5px #0003;
   color: #000;
@@ -88,4 +90,7 @@ body > footer {
 
 #themeIcon {
   height: 25px;
+  width: 25px;
+  display: block;
+  margin: 0 auto; /* Centers the icon within the circle */
 }
